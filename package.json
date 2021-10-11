@@ -1,0 +1,13 @@
+{
+  "name": "auth-srm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AryaKesharwani/auth-srm.git",
+  "author": "Arya kesarwani <aryakesharwani1234@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.10"
+  }
+}

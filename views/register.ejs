@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs'); %>
+    <title>Registraion</title>
+  </head>
+  <body>
+    <!-- https://jsfiddle.net/bootstrapious/j80aheo9/ -->
+    <style>
+      .login,
+      .image {
+        min-height: 100vh;
+      }
+
+      .bg-image {
+        background-image: url("https://images.unsplash.com/photo-1605089313990-0b807c4649f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+        background-size: cover;
+        background-position: center center;
+      }
+    </style>
+    <!-- testing -->
+    <div class="container-fluid">
+      <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+          <div class="login d-flex align-items-center py-5">
+            <!-- Demo content-->
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-10 col-xl-7 mx-auto">
+                  <h3 class="display-4">Split page!</h3>
+                  <p class="text-muted mb-4">
+                    Create a login split page using Bootstrap 4.
+                  </p>
+                  <form>
+                    <div class="form-group mb-3">
+                      <input
+                        id="inputEmail"
+                        type="email"
+                        placeholder="Email address"
+                        required=""
+                        autofocus=""
+                        class="
+                          form-control
+                          rounded-pill
+                          border-0
+                          shadow-sm
+                          px-4
+                        "
+                      />
+                    </div>
+                    <div class="form-group mb-3">
+                      <input
+                        id="inputPassword"
+                        type="password"
+                        placeholder="Password"
+                        required=""
+                        class="
+                          form-control
+                          rounded-pill
+                          border-0
+                          shadow-sm
+                          px-4
+                          text-primary
+                        "
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      class="
+                        btn btn-primary btn-block
+                        text-uppercase
+                        mb-2
+                        rounded-pill
+                        shadow-sm
+                      "
+                    >
+                      log in
+                    </button>
+                    <div
+                      class="text-center d-flex justify-content-between mt-4"
+                    >
+                      <p>
+                        Login
+                        <a href="/login" class="font-italic text-muted">
+                          <u>here</u></a
+                        >
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- End -->
+          </div>
+        </div>
+        <!-- End -->
+      </div>
+    </div>
+
+    <!-- testing -->
+
+    <!-- <div class="container">
+      <h1>Registraion</h1>
+      <form id="reg-form">
+        <input
+          type="text"
+          autocomplete="off"
+          id="username"
+          placeholder="Username"
+        />
+        <input
+          type="password"
+          autocomplete="off"
+          id="password"
+          placeholder="Password"
+        />
+        <input type="submit" value="Submit form" />
+      </form>
+    </div> -->
+
+    <script src="/js/register.js"></script>
+  </body>
+</html>
