@@ -2,15 +2,16 @@ const bcrypt = require("bcryptjs");
 const User = require("../model/User");
 
 module.exports = async (req, res) => {
-  const { username, password: plainTextPassword } = req.body;
-
-  if (!username || typeof username !== "string") {
-    return res.json({ status: "error", error: "Invalid Username" });
+  const { email, password: plainTextPassword } = req.body;
+  console.log(email,plainTextPassword);
+  console.log(plainTextPassword.length < 5);
+  if (!email || typeof email !== "string") {
+    return res.json({ status: "error", error: "Invalid email" });
   }
   if (!plainTextPassword || typeof plainTextPassword !== "string") {
     return res.json({ status: "error", error: "Invalid password" });
   }
-  if (plainTextPassword.length < 5) {
+  if (plainTextPassword.length < 6) {
     return res.json({
       status: "error",
       error: "Password too small. Should be atleast 6 characters",
@@ -18,16 +19,16 @@ module.exports = async (req, res) => {
   }
   const password = await bcrypt.hash(plainTextPassword, 10);
   try {
-    // const response =await User.create({
-    //   username,password
-    // })
     const user = new User({
-      username,
+      email,
       password,
     });
     const response = await user.save();
     res.json({ status: "ok" });
   } catch (error) {
+    if(error.errors.email.kind){
+      return res.json({status:"error",error:"User already exists"})
+    }
     if (error.code === 11000) {
       return res.json({ status: "error", error: "User already exists" });
     }

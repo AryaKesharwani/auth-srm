@@ -3,7 +3,7 @@ form.addEventListener("submit", registerUser);
 
 async function registerUser(event) {
   event.preventDefault();
-  let username = document.getElementById("username").value;
+  let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
   const result = await fetch("/api/register", {
@@ -12,7 +12,7 @@ async function registerUser(event) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      username,
+      email,
       password,
     }),
   }).then((res) => res.json());

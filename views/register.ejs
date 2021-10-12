@@ -18,31 +18,24 @@
         background-position: center center;
       }
     </style>
-    <!-- testing -->
     <div class="container-fluid">
       <div class="row no-gutter">
-        <!-- The image half -->
         <div class="col-md-6 d-none d-md-flex bg-image"></div>
-
-        <!-- The content half -->
         <div class="col-md-6 bg-light">
           <div class="login d-flex align-items-center py-5">
-            <!-- Demo content-->
             <div class="container">
               <div class="row">
                 <div class="col-lg-10 col-xl-7 mx-auto">
-                  <h3 class="display-4">Split page!</h3>
-                  <p class="text-muted mb-4">
-                    Create a login split page using Bootstrap 4.
-                  </p>
-                  <form>
+                  <h3 class="display-4 mb-4">Register Page!</h3>
+                  <form id="reg-form">
                     <div class="form-group mb-3">
                       <input
-                        id="inputEmail"
+                        id="email"
                         type="email"
                         placeholder="Email address"
                         required=""
                         autofocus=""
+                        autocomplete="off"
                         class="
                           form-control
                           rounded-pill
@@ -54,10 +47,11 @@
                     </div>
                     <div class="form-group mb-3">
                       <input
-                        id="inputPassword"
+                        id="password"
                         type="password"
                         placeholder="Password"
                         required=""
+                        autocomplete="off"
                         class="
                           form-control
                           rounded-pill
@@ -78,14 +72,14 @@
                         shadow-sm
                       "
                     >
-                      log in
+                      Sign Up
                     </button>
                     <div
                       class="text-center d-flex justify-content-between mt-4"
                     >
                       <p>
                         Login
-                        <a href="/login" class="font-italic text-muted">
+                        <a href="/" class="font-italic text-muted">
                           <u>here</u></a
                         >
                       </p>
@@ -94,33 +88,10 @@
                 </div>
               </div>
             </div>
-            <!-- End -->
           </div>
         </div>
-        <!-- End -->
       </div>
     </div>
-
-    <!-- testing -->
-
-    <!-- <div class="container">
-      <h1>Registraion</h1>
-      <form id="reg-form">
-        <input
-          type="text"
-          autocomplete="off"
-          id="username"
-          placeholder="Username"
-        />
-        <input
-          type="password"
-          autocomplete="off"
-          id="password"
-          placeholder="Password"
-        />
-        <input type="submit" value="Submit form" />
-      </form>
-    </div> -->
 
     <script src="/js/register.js"></script>
   </body>
