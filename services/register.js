@@ -3,8 +3,6 @@ const User = require("../model/User");
 
 module.exports = async (req, res) => {
   const { email, password: plainTextPassword } = req.body;
-  console.log(email,plainTextPassword);
-  console.log(plainTextPassword.length < 5);
   if (!email || typeof email !== "string") {
     return res.json({ status: "error", error: "Invalid email" });
   }

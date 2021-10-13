@@ -8,9 +8,9 @@ router.get("/home", (req, res) => {
   res.render("home");
 });
 
-router.get('/register',(req,res)=>{
-  res.render('register')
-})
+router.get("/register", (req, res) => {
+  res.render("register");
+});
 
 router.get("/change-password", (req, res) => {
   res.render("change-password");
