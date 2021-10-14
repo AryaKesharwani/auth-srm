@@ -1,3 +1,4 @@
+let url = window.location.origin;
 (async () => {
   if (localStorage.getItem("token")) {
     const result = await fetch("/api/auth", {
@@ -11,10 +12,10 @@
     }).then((res) => res.json());
     if (result.status === "error") {
       localStorage.removeItem("token");
-      window.location.replace("http://localhost:3000/");
+      window.location.replace(`${url}`);
     }
   } else {
-    window.location.replace("http://localhost:3000/");
+    window.location.replace(`${url}`);
   }
 })();
 
